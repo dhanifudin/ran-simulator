@@ -1,0 +1,1415 @@
+{
+	"info": {
+		"_postman_id": "69d58c59-57a3-44b5-911a-c0e82176c335",
+		"name": "A1-EI Enrichment Information Service",
+		"description": "API for Enrichment Information Service.\n© 2021, O-RAN Alliance.\nAll rights reserved.\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "199602"
+	},
+	"item": [
+		{
+			"name": "A1-EI/v1",
+			"item": [
+				{
+					"name": "eijobs",
+					"item": [
+						{
+							"name": "{ei Job Id}",
+							"item": [
+								{
+									"name": "Individual EI job",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs",
+												":eiJobId"
+											],
+											"variable": [
+												{
+													"key": "eiJobId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiJobId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "EI job",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"eiTypeId\": \"sint\",\n  \"jobDefinition\": {},\n  \"jobResultUri\": \"qui labore et voluptate aute\",\n  \"jobStatusNotificationUri\": \"adipisicing o\"\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Enrichment Information job is not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": \"EI job type not found\",\n  \"status\": 404,\n  \"type\": \"consectetur\",\n  \"title\": \"reprehenderit cillum amet nulla aliquip\",\n  \"instance\": \"fu\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Individual EI job",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"eiTypeId\": \"sint\",\n  \"jobDefinition\": {},\n  \"jobResultUri\": \"qui labore et voluptate aute\",\n  \"jobStatusNotificationUri\": \"adipisicing o\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs",
+												":eiJobId"
+											],
+											"variable": [
+												{
+													"key": "eiJobId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiJobId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Job updated",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"eiTypeId\": \"sint\",\n  \"jobDefinition\": {},\n  \"jobResultUri\": \"qui labore et voluptate aute\",\n  \"jobStatusNotificationUri\": \"adipisicing o\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Job created",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"eiTypeId\": \"sint\",\n  \"jobDefinition\": {},\n  \"jobResultUri\": \"qui labore et voluptate aute\",\n  \"jobStatusNotificationUri\": \"adipisicing o\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"eiTypeId\": \"sint\",\n  \"jobDefinition\": {},\n  \"jobResultUri\": \"qui labore et voluptate aute\",\n  \"jobStatusNotificationUri\": \"adipisicing o\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"eiTypeId\": \"sint\",\n  \"jobDefinition\": {},\n  \"jobResultUri\": \"qui labore et voluptate aute\",\n  \"jobStatusNotificationUri\": \"adipisicing o\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Enrichment Information type is not found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"eiTypeId\": \"sint\",\n  \"jobDefinition\": {},\n  \"jobResultUri\": \"qui labore et voluptate aute\",\n  \"jobStatusNotificationUri\": \"adipisicing o\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": \"EI job type not found\",\n  \"status\": 404,\n  \"type\": \"consectetur\",\n  \"title\": \"reprehenderit cillum amet nulla aliquip\",\n  \"instance\": \"fu\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Individual EI job",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs",
+												":eiJobId"
+											],
+											"variable": [
+												{
+													"key": "eiJobId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiJobId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Not used",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Job deleted",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Enrichment Information job is not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": \"EI job type not found\",\n  \"status\": 404,\n  \"type\": \"consectetur\",\n  \"title\": \"reprehenderit cillum amet nulla aliquip\",\n  \"instance\": \"fu\"\n}"
+										}
+									]
+								},
+								{
+									"name": "EI job status",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId/status",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs",
+												":eiJobId",
+												"status"
+											],
+											"variable": [
+												{
+													"key": "eiJobId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiJobId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "EI job status",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId/status",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId",
+														"status"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"eiJobStatus\": \"ENABLED\"\n}"
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId/status",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId",
+														"status"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId/status",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId",
+														"status"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Enrichment Information job is not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/A1-EI/v1/eijobs/:eiJobId/status",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"A1-EI",
+														"v1",
+														"eijobs",
+														":eiJobId",
+														"status"
+													],
+													"variable": [
+														{
+															"key": "eiJobId",
+															"value": "nostrud dolore sit ullamco",
+															"description": "(Required) eiJobId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": \"EI job type not found\",\n  \"status\": 404,\n  \"type\": \"consectetur\",\n  \"title\": \"reprehenderit cillum amet nulla aliquip\",\n  \"instance\": \"fu\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "EI job identifiers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/A1-EI/v1/eijobs?eiTypeId=nostrud dolore sit ullamco&owner=nostrud dolore sit ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"A1-EI",
+										"v1",
+										"eijobs"
+									],
+									"query": [
+										{
+											"key": "eiTypeId",
+											"value": "nostrud dolore sit ullamco",
+											"description": "selects EI jobs of matching EI type"
+										},
+										{
+											"key": "owner",
+											"value": "nostrud dolore sit ullamco",
+											"description": "selects EI jobs for one EI job owner"
+										}
+									]
+								},
+								"description": "query for EI job identifiers"
+							},
+							"response": [
+								{
+									"name": "EI job identifiers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs?eiTypeId=nostrud dolore sit ullamco&owner=nostrud dolore sit ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs"
+											],
+											"query": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco"
+												},
+												{
+													"key": "owner",
+													"value": "nostrud dolore sit ullamco"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  \"proident incididunt\",\n  \"laboris a\"\n]"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs?eiTypeId=nostrud dolore sit ullamco&owner=nostrud dolore sit ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs"
+											],
+											"query": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco"
+												},
+												{
+													"key": "owner",
+													"value": "nostrud dolore sit ullamco"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs?eiTypeId=nostrud dolore sit ullamco&owner=nostrud dolore sit ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs"
+											],
+											"query": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco"
+												},
+												{
+													"key": "owner",
+													"value": "nostrud dolore sit ullamco"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Enrichment Information type is not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eijobs?eiTypeId=nostrud dolore sit ullamco&owner=nostrud dolore sit ullamco",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eijobs"
+											],
+											"query": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco"
+												},
+												{
+													"key": "owner",
+													"value": "nostrud dolore sit ullamco"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": \"EI job type not found\",\n  \"status\": 404,\n  \"type\": \"consectetur\",\n  \"title\": \"reprehenderit cillum amet nulla aliquip\",\n  \"instance\": \"fu\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "eitypes",
+					"item": [
+						{
+							"name": "EI type identifiers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/A1-EI/v1/eitypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"A1-EI",
+										"v1",
+										"eitypes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "EI type identifiers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  \"proident incididunt\",\n  \"laboris a\"\n]"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Individual EI type",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/A1-EI/v1/eitypes/:eiTypeId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"A1-EI",
+										"v1",
+										"eitypes",
+										":eiTypeId"
+									],
+									"variable": [
+										{
+											"key": "eiTypeId",
+											"value": "nostrud dolore sit ullamco",
+											"description": "(Required) eiTypeId"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "EI type",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes/:eiTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes",
+												":eiTypeId"
+											],
+											"variable": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiTypeId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes/:eiTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes",
+												":eiTypeId"
+											],
+											"variable": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiTypeId"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes/:eiTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes",
+												":eiTypeId"
+											],
+											"variable": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiTypeId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Enrichment Information type is not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/A1-EI/v1/eitypes/:eiTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"A1-EI",
+												"v1",
+												"eitypes",
+												":eiTypeId"
+											],
+											"variable": [
+												{
+													"key": "eiTypeId",
+													"value": "nostrud dolore sit ullamco",
+													"description": "(Required) eiTypeId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"detail\": \"EI job type not found\",\n  \"status\": 404,\n  \"type\": \"consectetur\",\n  \"title\": \"reprehenderit cillum amet nulla aliquip\",\n  \"instance\": \"fu\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "//localhost:36353/",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,1832 @@
+{
+	"info": {
+		"_postman_id": "53f44886-29c0-4a64-a58d-5289b9fbc919",
+		"name": "A1-P Policy Management Service",
+		"description": "API for Policy Management Service.\n© 2021, O-RAN Alliance.\nAll rights reserved.\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "199602"
+	},
+	"item": [
+		{
+			"name": "policytypes",
+			"item": [
+				{
+					"name": "{policy Type Id}",
+					"item": [
+						{
+							"name": "policies",
+							"item": [
+								{
+									"name": "{policy Id}",
+									"item": [
+										{
+											"name": "/policytypes/:policyTypeId/policies/:policyId",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=Ut aliquip id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"policytypes",
+														":policyTypeId",
+														"policies",
+														":policyId"
+													],
+													"query": [
+														{
+															"key": "notificationDestination",
+															"value": "Ut aliquip id"
+														}
+													],
+													"variable": [
+														{
+															"key": "policyTypeId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "policyId",
+															"value": "consectetur sed dolore exercitation",
+															"description": "(Required) "
+														},
+														{
+															"key": "apiRoot",
+															"value": "{{apiRoot}}",
+															"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+														}
+													]
+												},
+												"description": "Create, or update, a policy"
+											},
+											"response": [
+												{
+													"name": "The policy was updated",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"query": [
+																{
+																	"key": "notificationDestination",
+																	"value": "<string>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "consectetur sed dolore exercitation",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "The policy was created",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"query": [
+																{
+																	"key": "notificationDestination",
+																	"value": "<string>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "consectetur sed dolore exercitation",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Location",
+															"value": "exercitation reprehenderit",
+															"description": "(Required) Contains the URI of the created policy"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "Object in payload not properly formulated or not related to the method",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"query": [
+																{
+																	"key": "notificationDestination",
+																	"value": "<string>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "consectetur sed dolore exercitation",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "Request could not be processed in the current state of the resource",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"query": [
+																{
+																	"key": "notificationDestination",
+																	"value": "<string>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "consectetur sed dolore exercitation",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "Too many requests have been sent in a given amount of time",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"query": [
+																{
+																	"key": "notificationDestination",
+																	"value": "<string>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "consectetur sed dolore exercitation",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "The provider is currently unable to handle the request due to a temporary overload",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"query": [
+																{
+																	"key": "notificationDestination",
+																	"value": "<string>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "consectetur sed dolore exercitation",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "The method could not be performed on the resource because the provider is unable to store the representation needed to successfully complete the request",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId?notificationDestination=<string>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"query": [
+																{
+																	"key": "notificationDestination",
+																	"value": "<string>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "consectetur sed dolore exercitation",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Insufficient Storage (WebDAV) (RFC 4918)",
+													"code": 507,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												}
+											]
+										},
+										{
+											"name": "/policytypes/:policyTypeId/policies/:policyId",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"policytypes",
+														":policyTypeId",
+														"policies",
+														":policyId"
+													],
+													"variable": [
+														{
+															"key": "policyTypeId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "policyId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "apiRoot",
+															"value": "{{apiRoot}}",
+															"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+														}
+													]
+												},
+												"description": "Query a policy"
+											},
+											"response": [
+												{
+													"name": "The requested policy",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "No resource found at the URI",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "Request could not be processed in the current state of the resource",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "Too many requests have been sent in a given amount of time",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "The provider is currently unable to handle the request due to a temporary overload",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												}
+											]
+										},
+										{
+											"name": "/policytypes/:policyTypeId/policies/:policyId",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/problem+json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"policytypes",
+														":policyTypeId",
+														"policies",
+														":policyId"
+													],
+													"variable": [
+														{
+															"key": "policyTypeId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "policyId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "apiRoot",
+															"value": "{{apiRoot}}",
+															"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+														}
+													]
+												},
+												"description": "Delete a policy"
+											},
+											"response": [
+												{
+													"name": "The policy was deleted",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "No resource found at the URI",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "Too many requests have been sent in a given amount of time",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "The provider is currently unable to handle the request due to a temporary overload",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												}
+											]
+										},
+										{
+											"name": "/policytypes/:policyTypeId/policies/:policyId/status",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId/status",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"policytypes",
+														":policyTypeId",
+														"policies",
+														":policyId",
+														"status"
+													],
+													"variable": [
+														{
+															"key": "policyTypeId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "policyId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "apiRoot",
+															"value": "{{apiRoot}}",
+															"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+														}
+													]
+												},
+												"description": "Query a policy status"
+											},
+											"response": [
+												{
+													"name": "The requested policy status",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId/status",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId",
+																"status"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "No resource found at the URI",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId/status",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId",
+																"status"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "Request could not be processed in the current state of the resource",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId/status",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId",
+																"status"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "Too many requests have been sent in a given amount of time",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId/status",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId",
+																"status"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Too Many Requests",
+													"code": 429,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												},
+												{
+													"name": "The provider is currently unable to handle the request due to a temporary overload",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies/:policyId/status",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"policytypes",
+																":policyTypeId",
+																"policies",
+																":policyId",
+																"status"
+															],
+															"variable": [
+																{
+																	"key": "policyTypeId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "policyId",
+																	"value": "<string>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "apiRoot",
+																	"value": "{{apiRoot}}",
+																	"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+																}
+															]
+														}
+													},
+													"status": "Service Unavailable",
+													"code": 503,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/problem+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/policytypes/:policyTypeId/policies",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"policytypes",
+												":policyTypeId",
+												"policies"
+											],
+											"variable": [
+												{
+													"key": "policyTypeId",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "apiRoot",
+													"value": "{{apiRoot}}",
+													"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+												}
+											]
+										},
+										"description": "Get all policy identifiers"
+									},
+									"response": [
+										{
+											"name": "Array of all policy identifiers",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"policytypes",
+														":policyTypeId",
+														"policies"
+													],
+													"variable": [
+														{
+															"key": "policyTypeId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "apiRoot",
+															"value": "{{apiRoot}}",
+															"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  \"tempor deserunt ullamco nostrud aute\",\n  \"nisi cupidatat sint ullamco ut\"\n]"
+										},
+										{
+											"name": "Too many requests have been sent in a given amount of time",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"policytypes",
+														":policyTypeId",
+														"policies"
+													],
+													"variable": [
+														{
+															"key": "policyTypeId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "apiRoot",
+															"value": "{{apiRoot}}",
+															"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+														}
+													]
+												}
+											},
+											"status": "Too Many Requests",
+											"code": 429,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/problem+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+										},
+										{
+											"name": "The provider is currently unable to handle the request due to a temporary overload",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/policytypes/:policyTypeId/policies",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"policytypes",
+														":policyTypeId",
+														"policies"
+													],
+													"variable": [
+														{
+															"key": "policyTypeId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "apiRoot",
+															"value": "{{apiRoot}}",
+															"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+														}
+													]
+												}
+											},
+											"status": "Service Unavailable",
+											"code": 503,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/problem+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/policytypes/:policyTypeId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/policytypes/:policyTypeId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"policytypes",
+										":policyTypeId"
+									],
+									"variable": [
+										{
+											"key": "policyTypeId",
+											"value": "tempor cupidatat sed eu",
+											"description": "(Required) "
+										},
+										{
+											"key": "apiRoot",
+											"value": "{{apiRoot}}",
+											"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+										}
+									]
+								},
+								"description": "Get the schemas for a policy type"
+							},
+							"response": [
+								{
+									"name": "The policy type schemas",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/policytypes/:policyTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"policytypes",
+												":policyTypeId"
+											],
+											"variable": [
+												{
+													"key": "policyTypeId",
+													"value": "tempor cupidatat sed eu",
+													"description": "(Required) "
+												},
+												{
+													"key": "apiRoot",
+													"value": "{{apiRoot}}",
+													"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"policySchema\": {},\n  \"statusSchema\": {}\n}"
+								},
+								{
+									"name": "No resource found at the URI",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/policytypes/:policyTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"policytypes",
+												":policyTypeId"
+											],
+											"variable": [
+												{
+													"key": "policyTypeId",
+													"value": "tempor cupidatat sed eu",
+													"description": "(Required) "
+												},
+												{
+													"key": "apiRoot",
+													"value": "{{apiRoot}}",
+													"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/problem+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+								},
+								{
+									"name": "Too many requests have been sent in a given amount of time",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/policytypes/:policyTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"policytypes",
+												":policyTypeId"
+											],
+											"variable": [
+												{
+													"key": "policyTypeId",
+													"value": "tempor cupidatat sed eu",
+													"description": "(Required) "
+												},
+												{
+													"key": "apiRoot",
+													"value": "{{apiRoot}}",
+													"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+												}
+											]
+										}
+									},
+									"status": "Too Many Requests",
+									"code": 429,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/problem+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+								},
+								{
+									"name": "The provider is currently unable to handle the request due to a temporary overload",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/policytypes/:policyTypeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"policytypes",
+												":policyTypeId"
+											],
+											"variable": [
+												{
+													"key": "policyTypeId",
+													"value": "tempor cupidatat sed eu",
+													"description": "(Required) "
+												},
+												{
+													"key": "apiRoot",
+													"value": "{{apiRoot}}",
+													"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+												}
+											]
+										}
+									},
+									"status": "Service Unavailable",
+									"code": 503,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/problem+json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/policytypes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/policytypes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"policytypes"
+							],
+							"variable": [
+								{
+									"key": "apiRoot",
+									"value": "{{apiRoot}}",
+									"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+								}
+							]
+						},
+						"description": "Get all policy type identifiers"
+					},
+					"response": [
+						{
+							"name": "Array of all policy type identifiers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/policytypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"policytypes"
+									],
+									"variable": [
+										{
+											"key": "apiRoot",
+											"value": "{{apiRoot}}",
+											"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  \"consequat exercitation enim adipisicing veniam\",\n  \"occaecat sit\"\n]"
+						},
+						{
+							"name": "Too many requests have been sent in a given amount of time",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/policytypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"policytypes"
+									],
+									"variable": [
+										{
+											"key": "apiRoot",
+											"value": "{{apiRoot}}",
+											"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+										}
+									]
+								}
+							},
+							"status": "Too Many Requests",
+							"code": 429,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+						},
+						{
+							"name": "The provider is currently unable to handle the request due to a temporary overload",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/policytypes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"policytypes"
+									],
+									"variable": [
+										{
+											"key": "apiRoot",
+											"value": "{{apiRoot}}",
+											"description": "apiRoot as defined in clause 4.2.1 in ORAN-WG2.A1.AP"
+										}
+									]
+								}
+							},
+							"status": "Service Unavailable",
+							"code": 503,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"type\": \"ut elit laborum\",\n  \"title\": \"\",\n  \"status\": -65965554.7042945,\n  \"detail\": \"tempor ut\",\n  \"instance\": \"in dolore\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "apiRoot",
+			"value": "https://example.com",
+			"type": "any"
+		},
+		{
+			"key": "baseUrl",
+			"value": "{{apiRoot}}/A1-P/v2",
+			"type": "string"
+		}
+	]
+}
