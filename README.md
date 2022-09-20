@@ -23,7 +23,7 @@ helm install onos-operator onos/onos-operator -n kube-system --wait --version 0.
 
 # Install sdran (not in kube-system namespace)
 kubectl create namespace sdran
-helm -n sdran install sdran sdran/sdran --version 1.4.5
+helm -n sdran install sdran sdran/sd-ran --version 1.4.5
 ```
 
 ## Install or Uninstall RAN Simulator
