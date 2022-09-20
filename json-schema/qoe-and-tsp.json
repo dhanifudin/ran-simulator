@@ -1,0 +1,43 @@
+{
+  "qoeObjectives": {
+    "initialBuffering": 1000,
+    "qoeScore": 100,
+    "reBuffFreq": 100,
+    "stallRatio": 100
+  },
+  "scope": {
+    "cellId": {
+      "cId": {
+        "ncI": 100,
+        "ecI": 100
+      },
+      "plmnId": {
+        "mcc": "test",
+        "mnc": "test"
+      }
+    },
+    "qosId": {
+      "5qI": 10,
+      "qcI": 10 
+    },
+    "sliceId": {
+      "plmnId": {
+        "mcc": "test",
+        "mnc": "test"
+      },
+      "sd": "test",
+      "sst": 100
+    },
+    "ueId": "test"
+  },
+  "tspResources": {
+    "cellIdList": [
+      {
+        "ncI": 100,
+        "ecI": 100
+      }
+    ],
+    "preference": "AVOID",
+    "primary": true
+  }
+}
