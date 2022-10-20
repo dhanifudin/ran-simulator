@@ -1,15 +1,15 @@
 meta:
-  url:
-  title:
+  url: https://sdran-simulator.dhanifudin.com
+  title: SDRAN Simulator
   description:
-  siteName:
-  sns: ['twitter']
+  siteName: SDRAN Simulator
+  sns: ['github']
 slide:
   loop: false
   ui:
     sidebar: true
     vertical: false
-    pagination: # bullets | progressbar | fraction
+    pagination: progressbar # bullets | progressbar | fraction
     effect: # fade | cube | flip
   code:
     # https://prismjs.com/
