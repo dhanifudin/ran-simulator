@@ -1,0 +1,22 @@
+name: 'Deploy slides to github pages'
+
+on:
+  push:
+    branches:
+      - docs
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npx fusuma build
+      - run: cp CNAME ./dist
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
