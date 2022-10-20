@@ -1,7 +1,7 @@
 <!-- classes: title -->
 
 # O-RAN
-## SDRAN Simulator
+## Running Simulator
 
 <!-- block-start: grid -->
 <!-- account: github, dhanifudin -->

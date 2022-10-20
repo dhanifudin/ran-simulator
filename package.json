@@ -1,5 +1,5 @@
 {
-  "name": "gre",
+  "name": "sdran-simulator-docs",
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
@@ -13,6 +13,6 @@
     "pdf": "npm run build && fusuma pdf"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Dian Hanifudin Subhi",
+  "license": "MIT"
 }
