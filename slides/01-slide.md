@@ -10,7 +10,7 @@ Dian Hanifudin Subhi
 
 ---
 
-<!-- section-title: Passage -->
+<!-- section-title: Installation -->
 
 ## Outline
 

@@ -15,6 +15,7 @@ Dian Hanifudin Subhi
 # Outline
 
 - Requirements
+- Structure
 
 ---
 
@@ -24,8 +25,31 @@ Dian Hanifudin Subhi
 - [Manage multiple Go versions](htps://go.dev/doc/manage-install)
   > SDK developed and tested using go version 1.6.
   > We can use Go Version Manager [gvm](https://github.com/andrewkroh/gvm), [asdf](https://asdf-vm.com/) etc
-- Familiar with docker (build image)
 - Familiar with protobuf (gRPC) and REST
+- Familiar with Makefile
+- Familiar with docker (build image)
+
+---
+
+# Structure
+
+Clone xApp Example Rimedo Traffic Steering
+
+```bash
+git clone https://github.com/onosproject/rimedo-ts
+```
+
+Project Structure
+```bash
+rimedo-ts
+├── build
+├── cmd
+├── go.mod
+├── go.sum
+├── Makefile
+├── pkg
+└── test
+```
 
 ---
 
