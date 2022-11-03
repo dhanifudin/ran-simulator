@@ -14,5 +14,8 @@
   },
   "keywords": [],
   "author": "Dian Hanifudin Subhi",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fusuma/task-pdf": "^2.8.4"
+  }
 }

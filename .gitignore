@@ -1,1 +1,4 @@
+.tmp-output-slide-pdf/
+dist/
 node_modules/
+slide.pdf
