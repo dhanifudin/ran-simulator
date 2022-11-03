@@ -12,7 +12,8 @@ Dian Hanifudin Subhi
 
 <!-- section-title: Outline -->
 
-## Outline SD-RAN µONOS by onosproject
+# Outline
+## SD-RAN µONOS by onosproject
 
 - Basic
 - Installation
@@ -55,9 +56,66 @@ from https://docs.docker.com
 
 ---
 
+## Dockerfile
+
+```Dockerfile
+# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+ARG ONOS_BUILD_VERSION=undefined
+
+FROM onosproject/golang-build:v1.0 as build
+
+ENV GO111MODULE=on
+ARG ONOS_MAKE_TARGET=build
+
+COPY Makefile go.mod go.sum /go/src/github.com/onosproject/onos-kpimon/
+COPY cmd/ /go/src/github.com/onosproject/onos-kpimon/cmd/
+COPY pkg/ /go/src/github.com/onosproject/onos-kpimon/pkg/
+COPY vendor/ /go/src/github.com/onosproject/onos-kpimon/vendor/
+COPY api/ /go/src/github.com/onosproject/onos-kpimon/api
+COPY build/build-tools /go/src/github.com/onosproject/onos-kpimon/build/build-tools
+
+RUN cd /go/src/github.com/onosproject/onos-kpimon && GOFLAGS=-mod=vendor make ${ONOS_MAKE_TARGET}
+
+FROM alpine:3.11
+RUN apk add libc6-compat
+
+USER nobody
+
+COPY --from=build /go/src/github.com/onosproject/onos-kpimon/build/_output/onos-kpimon /usr/local/bin/onos-kpimon
+
+ENTRYPOINT ["onos-kpimon"]
+```
+
+---
+
+## Docker Command
+
+```bash
+# pull image from registy to local
+docker pull ubuntu
+# run docker from image
+docker run -it -d ubuntu
+# list running containers
+docker ps
+# login into registry
+docker login
+# build image based on Dockerfile
+docker build .
+# push image from local to registry
+docker push dhanifudin/app
+
+```
+
+---
+
 ## Basic of Kubernetes
 
-Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
+Kubernetes, also known as K8s, is an open-source system for automating
+deployment, scaling, and management of containerized applications. Interaction
+against Kubernetes cluster using `kubectl`.
 
 ---
 
@@ -69,13 +127,22 @@ Kubernetes, also known as K8s, is an open-source system for automating deploymen
 
 ## Namespace
 
+- Namespace provides mechanism for isolating groups of resources.
+- Create namespace using `kubectl` command `kubectl create name-of-namespace`
+- Get all namespace in Kubernetes `kubectl get namespace`
+
 ---
 
 ## Cluster
 
+- Kubernetes cluster is a set of nodes that run containerized applications.
+- Node may be virtual or physical machine
+
 ---
 
 ## Pod
+
+- Pod is a group of one or more containers
 
 ---
 
@@ -165,13 +232,50 @@ Hello, 세계
 
 ## Basic of gRPC
 
-gRPC is a modern open source high performance Remote Procedure Call (RPC).
+- gRPC is a modern open source high performance Remote Procedure Call (RPC).
+- gRPC uses Protocol Buffers (protobuf) to serializing data.
+
+---
+
+## Basic of gRPC
+
+<!-- block-start: grid -->
+<!-- block-start: column -->
+![gRPC](https://grpc.io/img/landing-2.svg)
+<!-- block-end -->
+<!-- block-start: column -->
+```proto
+// The greeter service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+```
+<!-- block-end -->
+<!-- block-end -->
 
 ---
 
 ## Basic of REST API
 
+- REST is an acronym for **RE**presentational **S**tate **T**ransfer
+- Architectural style for API that uses HTTP requests to access and use data.
+- HTTP request: GET, PUT, POST and DELETE
+- Response in JSON (most common) or XML
+
 ---
+
+<!-- section-title: Installation -->
 
 ## Installation µONOS
 
@@ -271,6 +375,8 @@ onos-uenib-67d864bc76-55h2l    3/3     Running   0          4m17s
 [https://bit.ly/install-ran-simulator](https://bit.ly/install-ran-simulator)
 
 ---
+
+<!-- section-title: Running Simulation -->
 
 ## Running Simulation
 
@@ -692,11 +798,15 @@ model).
 
 ---
 
+<!-- section-title: Video Demo -->
+
 ## Video Demo
 
 [Video Demo](https://drive.google.com/file/d/1Rv4Jw19OWESdqR6aO9RLQirl9FlzsKNL/view)
 
 ---
+
+<!-- section-title: Developing App -->
 
 # Developing App
 
@@ -751,9 +861,40 @@ Overview of xApp Architecture
 ---
 
 ## Developing xApp
-Build project
 
+Installing available xApp Examples
+- xApp installation can be done using helm command
+```bash
+# Run inside sdran-helm-charts cloned repository
+helm -n sdran install onos-kpimon onos-kpimon
+helm -n sdran install rimedo-ts rimedo-ts
+# Or using sdran repo
+helm -n sdran install onos-kpimon sdran/onos-kpimon
+helm -n sdran install rimedo-ts sdran/rimedo-ts
+```
 
+> Some xApp only compatible for specific requirements version of SD-RAN
+> components. There are two kind of versions in Helm chart, chart version and
+> app version, be careful. Example: [rimedo-ts](https://github.com/onosproject/rimedo-ts#requirements)
+
+---
+
+## Developing xApp
+- Build project using `make` command and [build-tools](https://github.com/onosproject/build-tools).
+- Definition of target defined in Makefile file.
+- [Makefile Example](https://github.com/onosproject/onos-kpimon/blob/master/Makefile)
+
+---
+
+## Developing xApp
+Test Driven Development (TDD) support using [helmit](https://github.com/onosproject/helmit).
+
+---
+
+## Developing xApp
+Challenge
+- Intercept reverse port-forward component from cluster to local communication
+- No many resource of tutorial
 
 ---
 
