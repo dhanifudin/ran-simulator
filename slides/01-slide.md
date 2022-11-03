@@ -125,11 +125,47 @@ helm -n namespace uninstall name
 
 ## Basic of Go Language
 
+- Go is an open source programming language supported by Google
+- Easy to learn and get started with (less keyword, OOP without class)
+- Built-in concurrency and a robust standard library (using goroutine and channel)
 
+---
+
+## Basic Structure of Go
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	hello := Hello{language: "Korean"}
+	hello.sayHello()
+}
+
+type Hello struct {
+	language string
+}
+
+func (h Hello) sayHello() {
+	if h.language == "Korean" {
+		fmt.Println("Hello, 세계")
+	} else {
+		fmt.Println("Hello, World")
+	}
+}
+```
+<!-- fragments-start -->
+```
+Hello, 세계
+```
+<!-- fragments-end -->
 
 ---
 
 ## Basic of gRPC
+
+gRPC is a modern open source high performance Remote Procedure Call (RPC).
 
 ---
 
@@ -142,6 +178,12 @@ helm -n namespace uninstall name
 ---
 
 # Running Simulation
+
+---
+
+## Video Demo
+
+[Video Demo](https://drive.google.com/file/d/1Rv4Jw19OWESdqR6aO9RLQirl9FlzsKNL/view)
 
 ---
 
