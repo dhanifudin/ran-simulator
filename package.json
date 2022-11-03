@@ -1,7 +1,7 @@
 {
-  "name": "gre",
+  "name": "sdran-simulator-docs",
   "version": "1.0.0",
-  "description": "",
+  "description": "SD-RAN simulator docs",
   "devDependencies": {
     "fusuma": "^2.8.4"
   },
@@ -13,6 +13,6 @@
     "pdf": "npm run build && fusuma pdf"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dian Hanifudin Subhi",
   "license": "ISC"
 }

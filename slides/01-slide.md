@@ -177,6 +177,101 @@ gRPC is a modern open source high performance Remote Procedure Call (RPC).
 
 ---
 
+## Installation
+Prerequisites Installation
+
+- **Docker**
+- **Kubernetes** Cluster or **k3s**, **k3d**, **kind** or **microk8s** for single node
+- **Helm** version 3
+- Ubuntu 18.04/20.04 (Optional: SDRAN-in-a-Box method Installation)
+
+---
+
+## Installation
+Add Helm Repositories
+
+```bash
+# Add repo cord, atomix and onos
+helm repo add cord https://charts.opencord.org
+helm repo add atomix https://charts.atomix.io
+helm repo add onos https://charts.onosproject.org
+# Optional or git clone sdran-helm-charts
+# git clone https://github.com/onosproject/sdran-helm-charts
+helm repo add sdran https://sdrancharts.onosproject.org
+helm repo update
+```
+
+---
+
+## Installation
+Install components in kube-system namespace
+
+```bash
+helm install atomix-controller atomix/atomix-controller -n kube-system --wait --version 0.6.9
+helm install atomix-raft-storage atomix/atomix-raft-storage -n kube-system --wait --version 0.1.25
+helm install onos-operator onos/onos-operator -n kube-system --wait --version 0.5.2
+```
+
+---
+
+## Installation
+Prepare Kubernetes Namespace
+```bash
+# create sdran namespace
+kubectl create namespace sdran
+```
+
+---
+
+## Installation
+Install sd-ran components
+
+```bash
+git clone https://github.com/onosproject/sdran-helm-charts
+cd sdran-helm-charts
+
+# helm -n namespace install release-name helm-charts-dir
+helm -n sdran install sd-ran sd-ran
+# or install without clone helm charts
+helm -n sdran install sd-ran sdran/sd-ran
+```
+
+> If there are errors related with dependency, please run `helm dependency build sd-ran`
+> then run helm install again.
+
+---
+
+## Installation
+
+Monitor the installation of sd-ran components
+
+```bash
+kubectl -n sdran get pods
+
+NAME                           READY   STATUS    RESTARTS   AGE
+onos-a1t-5b6cdf4c7c-qg77s      2/2     Running   0          4m17s
+onos-cli-89b47d4b7-npw6h       1/1     Running   0          4m17s
+onos-config-76f8b49887-qt8lg   4/4     Running   0          4m17s
+onos-consensus-store-0         1/1     Running   0          4m17s
+onos-e2t-57ccb4b454-wb5gn      3/3     Running   0          4m17s
+onos-topo-d66795968-qp6p4      3/3     Running   0          4m17s
+onos-uenib-67d864bc76-55h2l    3/3     Running   0          4m17s
+```
+
+> **Tips**:
+> We can combine command with `watch` to update output periodically
+> `watch kubectl -n sdran get pods`
+
+---
+
+## Installation
+
+**TLDR;**
+
+[https://bit.ly/install-ran-simulator](https://bit.ly/install-ran-simulator)
+
+---
+
 # Running Simulation
 
 ---
