@@ -230,6 +230,14 @@ Hello, 세계
 
 ---
 
+## Manage Version and Dependency in Golang
+
+- Find specific version then install manually [docs](https://go.dev/doc/manage-install)
+- Go Version Manager tools (gvm, asdf)
+- Manage dependency with `go mod` and `go get`
+
+---
+
 ## Basic of gRPC
 
 - gRPC is a modern open source high performance Remote Procedure Call (RPC).
