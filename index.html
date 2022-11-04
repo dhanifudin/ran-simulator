@@ -1,0 +1,460 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SDRAN Simulator</title><meta property="og:title" content="SDRAN Simulator"><meta property="og:type" content="article"><meta property="og:url" content="https://sdran-simulator.dhanifudin.com"><meta property="og:image" content="https://sdran-simulator.dhanifudin.com/thumbnail.png"><meta property="og:site_name" content="SDRAN Simulator"><script defer="defer" src="/runtime.aaadeff7f0e2a1437e50.bundle.js"></script><script defer="defer" src="/vendor.edab4c338b11fcacceb1.bundle.js"></script><script defer="defer" src="/main.697add630a62b2309321.bundle.js"></script><link href="/vendor.edab4c338b11fcacceb1.css" rel="stylesheet"><link href="/main.697add630a62b2309321.css" rel="stylesheet"><link rel="prefetch" as="script" href="/921.460c476777e42ea1dcda.bundle.js"></head><body><div id="root"><div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" id="main-slides"><div class="swiper-pagination"></div><div class="swiper-wrapper" id="swiper-wrapper-8f9f22edb83128a3" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide title swiper-slide-active" data-hash="slide-1" role="group" aria-label="1 / 51" style="width: 1200px;"><div class="slide-internal-box"><h1>O-RAN Simulation</h1><h2>Using SD-RAN (onosproject)</h2><div class="grid"><a href="https://github.com/dhanifudin" class="account account-github" aria-label="account-github"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><p>Dian Hanifudin Subhi</p></div></div></div><div class="swiper-slide section-title swiper-slide-next" data-hash="slide-2" role="group" aria-label="2 / 51" style="width: 1200px;"><div class="slide-internal-box"><h1>Outline</h1><h2>SD-RAN µONOS by onosproject</h2><ul><li>Basic</li><li>Installation</li><li>Running Simulation</li><li>Developing App</li></ul></div></div><div class="swiper-slide section-title" data-hash="slide-3" role="group" aria-label="3 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic of Docker</h2><p>Docker is an open platform for developing, shipping, and running applications.</p></div></div><div class="swiper-slide" data-hash="slide-4" role="group" aria-label="4 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Docker Architecture</h2><p><img src="https://docs.docker.com/engine/images/architecture.svg" alt="Docker Architecture">
+from <a href="https://docs.docker.com">https://docs.docker.com</a></p></div></div><div class="swiper-slide" data-hash="slide-5" role="group" aria-label="5 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Docker Architecture (cont..)</h2><ul><li><strong>Docker Daemon</strong> (dockerd): daemon listens for Docker API requests and manages
+Docker objects.</li><li><strong>Docker Client</strong>: the primary way of users to interact with Docker.</li><li><strong>Docker Desktop</strong>: Application for Mac, Windows or Linux environment to make it easier
+to manage Docker and also Kubernetes.</li><li><strong>Docker Registries</strong>: registry to store Docker images. Example: Docker Hub</li><li><strong>Docker Objects</strong>: images, containers, networks, volumes, plugins and other
+objects.</li></ul></div></div><div class="swiper-slide" data-hash="slide-6" role="group" aria-label="6 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Virtualization vs Container</h2><p><img src="/dbecc131f4793e0f0691.webp" alt="VM vs Container"></p></div></div><div class="swiper-slide" data-hash="slide-7" role="group" aria-label="7 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Dockerfile</h2><pre class="language-dockerfile" tabindex="0"><code class="language-dockerfile"># SPDX-FileCopyrightText: 2019-present Open Networking Foundation &lt;info@opennetworking.org&gt;
+#
+# SPDX-License-Identifier: Apache-2.0
+
+ARG ONOS_BUILD_VERSION=undefined
+
+FROM onosproject/golang-build:v1.0 as build
+
+ENV GO111MODULE=on
+ARG ONOS_MAKE_TARGET=build
+
+COPY Makefile go.mod go.sum /go/src/github.com/onosproject/onos-kpimon/
+COPY cmd/ /go/src/github.com/onosproject/onos-kpimon/cmd/
+COPY pkg/ /go/src/github.com/onosproject/onos-kpimon/pkg/
+COPY vendor/ /go/src/github.com/onosproject/onos-kpimon/vendor/
+COPY api/ /go/src/github.com/onosproject/onos-kpimon/api
+COPY build/build-tools /go/src/github.com/onosproject/onos-kpimon/build/build-tools
+
+RUN cd /go/src/github.com/onosproject/onos-kpimon &amp;&amp; GOFLAGS=-mod=vendor make ${ONOS_MAKE_TARGET}
+
+FROM alpine:3.11
+RUN apk add libc6-compat
+
+USER nobody
+
+COPY --from=build /go/src/github.com/onosproject/onos-kpimon/build/_output/onos-kpimon /usr/local/bin/onos-kpimon
+
+ENTRYPOINT ["onos-kpimon"]
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-8" role="group" aria-label="8 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Docker Command</h2><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># pull image from registy to local</span>
+<span class="token function">docker</span> pull ubuntu
+<span class="token comment"># run docker from image</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">-d</span> ubuntu
+<span class="token comment"># list running containers</span>
+<span class="token function">docker</span> <span class="token function">ps</span>
+<span class="token comment"># login into registry</span>
+<span class="token function">docker</span> login
+<span class="token comment"># build image based on Dockerfile</span>
+<span class="token function">docker</span> build <span class="token builtin class-name">.</span>
+<span class="token comment"># push image from local to registry</span>
+<span class="token function">docker</span> push dhanifudin/app
+
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-9" role="group" aria-label="9 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic of Kubernetes</h2><p>Kubernetes, also known as K8s, is an open-source system for automating
+deployment, scaling, and management of containerized applications. Interaction
+against Kubernetes cluster using <code>kubectl</code>.</p></div></div><div class="swiper-slide" data-hash="slide-10" role="group" aria-label="10 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Kubernetes Architecture</h2><p><img src="/e802bf65fa09603bcfee.svg" alt="Component of Kubernetes"></p></div></div><div class="swiper-slide" data-hash="slide-11" role="group" aria-label="11 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Namespace</h2><ul><li>Namespace provides mechanism for isolating groups of resources.</li><li>Create namespace using <code>kubectl</code> command <code>kubectl create name-of-namespace</code></li><li>Get all namespace in Kubernetes <code>kubectl get namespace</code></li></ul></div></div><div class="swiper-slide" data-hash="slide-12" role="group" aria-label="12 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Cluster</h2><ul><li>Kubernetes cluster is a set of nodes that run containerized applications.</li><li>Node may be virtual or physical machine</li></ul></div></div><div class="swiper-slide" data-hash="slide-13" role="group" aria-label="13 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Pod</h2><ul><li>Pod is a group of one or more containers</li></ul></div></div><div class="swiper-slide" data-hash="slide-14" role="group" aria-label="14 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic of Helm</h2><p><strong>Helm</strong> is a package manager. Similar with package manager for other platforms like
+<strong>apt</strong>, <strong>yum</strong> or <strong>homebrew</strong>. <strong>Helm</strong> helps you manage Kubernetes applications.</p></div></div><div class="swiper-slide" data-hash="slide-15" role="group" aria-label="15 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Helm Chart</h2><ul><li>Helm uses a packaging format called charts.</li><li>Structure of helm chart</li></ul><pre class="language-bash" tabindex="0"><code class="language-bash">sd-ran
+├── Chart.lock   <span class="token comment"># Lock file</span>
+├── Chart.yaml   <span class="token comment"># A YAML file containing information about the chart</span>
+├── README.md    <span class="token comment"># Optional: A human readable README file</span>
+├── charts/      <span class="token comment"># A directory containing any charts upon which this chart depends.</span>
+├── files/       <span class="token comment"># Additional files to support application</span>
+├── templates/   <span class="token comment"># A directory of templates that when combined with value,</span>
+<span class="token operator">|</span>                <span class="token comment"># will generate valid Kubernetes manifest files.</span>
+└── values.yaml  <span class="token comment"># The default configuration value for this chart</span>
+</code></pre><p><a href="https://helm.sh/docs/topics/charts/">More Info</a></p></div></div><div class="swiper-slide" data-hash="slide-16" role="group" aria-label="16 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Helm Basic Command</h2><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Add helm repositories</span>
+helm repo <span class="token function">add</span> name https://chart.url
+<span class="token comment"># Update helm repositories</span>
+helm repo update
+<span class="token comment"># Helm install</span>
+helm <span class="token parameter variable">-n</span> namespace <span class="token function">install</span> name repo-name/name-of-package
+helm <span class="token parameter variable">-n</span> namespace <span class="token function">install</span> name location-chart-directory
+<span class="token comment"># Helm uninstall</span>
+helm <span class="token parameter variable">-n</span> namespace uninstall name
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-17" role="group" aria-label="17 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic of Go Language</h2><ul><li>Go is an open source programming language supported by Google</li><li>Easy to learn and get started with (less keyword, OOP without class)</li><li>Built-in concurrency and a robust standard library (using goroutine and channel)</li></ul></div></div><div class="swiper-slide" data-hash="slide-18" role="group" aria-label="18 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic Structure of Go</h2><pre class="language-go" tabindex="0"><code class="language-go"><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    hello <span class="token operator">:=</span> Hello<span class="token punctuation">{</span>language<span class="token punctuation">:</span> <span class="token string">"Korean"</span><span class="token punctuation">}</span>
+    hello<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> Hello <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    language <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>h Hello<span class="token punctuation">)</span> <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> h<span class="token punctuation">.</span>language <span class="token operator">==</span> <span class="token string">"Korean"</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Hello, 세계"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"Hello, World"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><pre style="visibility: hidden;"><code>Hello, 세계
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-19" role="group" aria-label="19 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Manage Version and Dependency in Golang</h2><ul><li>Find specific version then install manually <a href="https://go.dev/doc/manage-install">docs</a></li><li>Go Version Manager tools (gvm, asdf)</li><li>Manage dependency with <code>go mod</code> and <code>go get</code></li></ul></div></div><div class="swiper-slide" data-hash="slide-20" role="group" aria-label="20 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic of gRPC</h2><ul><li>gRPC is a modern open source high performance Remote Procedure Call (RPC).</li><li>gRPC uses Protocol Buffers (protobuf) to serializing data.</li></ul></div></div><div class="swiper-slide" data-hash="slide-21" role="group" aria-label="21 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic of gRPC</h2><div class="grid"><div class="column"><p><img src="https://grpc.io/img/landing-2.svg" alt="gRPC"></p></div><div class="column"><pre class="language-proto" tabindex="0"><code class="language-proto">// The greeter service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+</code></pre></div></div></div></div><div class="swiper-slide" data-hash="slide-22" role="group" aria-label="22 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Basic of REST API</h2><ul><li>REST is an acronym for <strong>RE</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</li><li>Architectural style for API that uses HTTP requests to access and use data.</li><li>HTTP request: GET, PUT, POST and DELETE</li><li>Response in JSON (most common) or XML</li></ul></div></div><div class="swiper-slide section-title" data-hash="slide-23" role="group" aria-label="23 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation µONOS</h2></div></div><div class="swiper-slide" data-hash="slide-24" role="group" aria-label="24 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation</h2><p>Prerequisites Installation</p><ul><li><strong>Docker</strong></li><li><strong>Kubernetes</strong> Cluster or <strong>k3s</strong>, <strong>k3d</strong>, <strong>kind</strong> or <strong>microk8s</strong> for single node</li><li><strong>Helm</strong> version 3</li><li>Ubuntu 18.04/20.04 (Optional: SDRAN-in-a-Box method Installation)</li></ul></div></div><div class="swiper-slide" data-hash="slide-25" role="group" aria-label="25 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation</h2><p>Add Helm Repositories</p><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Add repo cord, atomix and onos</span>
+helm repo <span class="token function">add</span> cord https://charts.opencord.org
+helm repo <span class="token function">add</span> atomix https://charts.atomix.io
+helm repo <span class="token function">add</span> onos https://charts.onosproject.org
+<span class="token comment"># Optional or git clone sdran-helm-charts</span>
+<span class="token comment"># git clone https://github.com/onosproject/sdran-helm-charts</span>
+helm repo <span class="token function">add</span> sdran https://sdrancharts.onosproject.org
+helm repo update
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-26" role="group" aria-label="26 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation</h2><p>Install components in kube-system namespace</p><pre class="language-bash" tabindex="0"><code class="language-bash">helm <span class="token function">install</span> atomix-controller atomix/atomix-controller <span class="token parameter variable">-n</span> kube-system <span class="token parameter variable">--wait</span> <span class="token parameter variable">--version</span> <span class="token number">0.6</span>.9
+helm <span class="token function">install</span> atomix-raft-storage atomix/atomix-raft-storage <span class="token parameter variable">-n</span> kube-system <span class="token parameter variable">--wait</span> <span class="token parameter variable">--version</span> <span class="token number">0.1</span>.25
+helm <span class="token function">install</span> onos-operator onos/onos-operator <span class="token parameter variable">-n</span> kube-system <span class="token parameter variable">--wait</span> <span class="token parameter variable">--version</span> <span class="token number">0.5</span>.2
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-27" role="group" aria-label="27 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation</h2><p>Prepare Kubernetes Namespace</p><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># create sdran namespace</span>
+kubectl create namespace sdran
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-28" role="group" aria-label="28 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation</h2><p>Install sd-ran components</p><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/onosproject/sdran-helm-charts
+<span class="token builtin class-name">cd</span> sdran-helm-charts
+
+<span class="token comment"># helm -n namespace install release-name helm-charts-dir</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> sd-ran sd-ran
+<span class="token comment"># or install without clone helm charts</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> sd-ran sdran/sd-ran
+</code></pre><blockquote><p>If there are errors related with dependency, please run <code>helm dependency build sd-ran</code>
+then run helm install again.</p></blockquote></div></div><div class="swiper-slide" data-hash="slide-29" role="group" aria-label="29 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation</h2><p>Monitor the installation of sd-ran components</p><pre class="language-bash" tabindex="0"><code class="language-bash">kubectl <span class="token parameter variable">-n</span> sdran get pods
+
+NAME                           READY   STATUS    RESTARTS   AGE
+onos-a1t-5b6cdf4c7c-qg77s      <span class="token number">2</span>/2     Running   <span class="token number">0</span>          4m17s
+onos-cli-89b47d4b7-npw6h       <span class="token number">1</span>/1     Running   <span class="token number">0</span>          4m17s
+onos-config-76f8b49887-qt8lg   <span class="token number">4</span>/4     Running   <span class="token number">0</span>          4m17s
+onos-consensus-store-0         <span class="token number">1</span>/1     Running   <span class="token number">0</span>          4m17s
+onos-e2t-57ccb4b454-wb5gn      <span class="token number">3</span>/3     Running   <span class="token number">0</span>          4m17s
+onos-topo-d66795968-qp6p4      <span class="token number">3</span>/3     Running   <span class="token number">0</span>          4m17s
+onos-uenib-67d864bc76-55h2l    <span class="token number">3</span>/3     Running   <span class="token number">0</span>          4m17s
+</code></pre><blockquote><p><strong>Tips</strong>:
+We can combine command with <code>watch</code> to update output periodically
+<code>watch kubectl -n sdran get pods</code></p></blockquote></div></div><div class="swiper-slide" data-hash="slide-30" role="group" aria-label="30 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Installation</h2><p><strong>TLDR;</strong></p><p><a href="https://bit.ly/install-ran-simulator">https://bit.ly/install-ran-simulator</a></p></div></div><div class="swiper-slide section-title" data-hash="slide-31" role="group" aria-label="31 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Load model and start simulation when install ran-simulator component.</p><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Run inside sdran-helm-charts</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> ran-simulator ran-simulator
+<span class="token comment"># Or</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> ran-simulator sdran/ran-simulator
+</code></pre><p>Unload model with helm uninstall (replace with new model)</p><pre class="language-bash" tabindex="0"><code class="language-bash">helm <span class="token parameter variable">-n</span> sdran uninstall ran-simulator
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-32" role="group" aria-label="32 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><ul><li>Interaction with simulator via onos-cli. onos-cli is Command-line interface for
+ONOS (µONOS Architecture)</li></ul><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Attach into onos-cli pod using kubectl command</span>
+kubectl <span class="token parameter variable">-n</span> sdran <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token variable"><span class="token variable">$(</span>kubectl <span class="token parameter variable">-n</span> sdran get pods <span class="token parameter variable">-l</span> <span class="token assign-left variable">type</span><span class="token operator">=</span>cli <span class="token parameter variable">-o</span> name<span class="token variable">)</span></span> -- /bin/sh
+</code></pre><ul><li>Inside the onos-cli pod, we can interact with simulator using <code>onos ransim</code>
+subcommand. To see available supported command please type help.</li></ul><pre class="language-bash" tabindex="0"><code class="language-bash">onos ransim
+<span class="token comment"># To see available supported command, please type help</span>
+onos ransim <span class="token builtin class-name">help</span>
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-33" role="group" aria-label="33 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Example Usage of onos cli</p><ul><li>Get the deployed nodes
+<img src="/2642cdf7f98ed44cb536.webp" alt="Get Nodes"></li></ul></div></div><div class="swiper-slide" data-hash="slide-34" role="group" aria-label="34 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Example Usage of onos cli</p><ul><li>Get routes of 100 UEs that generated by simulator
+<img src="/a2aa3bd05cfa6f777e95.webp" alt="Get Routes"></li></ul></div></div><div class="swiper-slide" data-hash="slide-35" role="group" aria-label="35 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Customize model of simulator</p><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Navigate inside sdran-helm-charts cloned repository</span>
+<span class="token builtin class-name">cd</span> sdran-helm-charts
+<span class="token comment"># Put custom-model.yaml inside ran-simulator/files/model</span>
+<span class="token comment"># Modify model by editing ran-simulator/values.yaml file</span>
+<span class="token function">vim</span> ran-simulator/values.yaml
+<span class="token comment"># Find modelName then replace with the desired model (without yaml ext)</span>
+<span class="token comment"># Load new model by run helm install</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> ran-simulator ran-simulator
+</code></pre><p><a href="https://github.com/onosproject/sdran-helm-charts/blob/29ffaaf6e5400ebe8b5f7be68a882158e7aed856/ran-simulator/values.yaml#L38">ran-simulator/values.yaml</a></p></div></div><div class="swiper-slide" data-hash="slide-36" role="group" aria-label="36 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Predefined Models</p><pre class="language-bash" tabindex="0"><code class="language-bash">ran-simulator/files/model
+├── model-5cell-100ue.yaml
+├── model-7cell-140ue.yaml
+├── model.yaml
+├── scale-50-150.yaml
+├── scale-model.yaml
+├── three-cell-model.yaml
+├── three-cell-n-node-model.yaml
+└── two-cell-two-node-model.yaml
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-37" role="group" aria-label="37 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Honeycomb Topology Generator. <a href="https://docs.sd-ran.org/master/ran-simulator/docs/topology_generator.html">Honeycomb Topology Generator Docs</a></p><ul><li>Prerequisites: Golang &gt;= 1.16</li><li>Installation Steps<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/onosproject/ran-simulator.git
+<span class="token comment"># Navigate into the ran-simulator project directory</span>
+go mod download
+<span class="token comment"># Run tool</span>
+go run cmd/honeycomb/honecomb.go topo <span class="token parameter variable">--towers</span> <span class="token number">3</span> output_model.yaml
+</code></pre></li></ul></div></div><div class="swiper-slide" data-hash="slide-38" role="group" aria-label="38 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><pre class="language-yaml" tabindex="0"><code class="language-yaml"><span class="token key atrule">layout</span><span class="token punctuation">:</span>
+  <span class="token key atrule">center</span><span class="token punctuation">:</span>
+    <span class="token key atrule">lat</span><span class="token punctuation">:</span> <span class="token number">52.52</span>
+    <span class="token key atrule">lng</span><span class="token punctuation">:</span> <span class="token number">13.405</span>
+  <span class="token key atrule">zoom</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">locationsscale</span><span class="token punctuation">:</span> <span class="token number">1.25</span>
+  <span class="token key atrule">fademap</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">showroutes</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">showpower</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">routeEndPoints</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token key atrule">wayPointRoute</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">directRoute</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">nodes</span><span class="token punctuation">:</span>
+  <span class="token key atrule">node1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">gnbid</span><span class="token punctuation">:</span> <span class="token number">20819</span>
+    <span class="token key atrule">controllers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> e2t<span class="token punctuation">-</span><span class="token number">1</span>
+    <span class="token key atrule">servicemodels</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> mho
+    <span class="token punctuation">-</span> kpm
+    <span class="token punctuation">-</span> rcpre2
+    <span class="token punctuation">-</span> kpm2
+    <span class="token key atrule">cells</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433857</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433858</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433859</span>
+    <span class="token key atrule">status</span><span class="token punctuation">:</span> stopped
+  <span class="token key atrule">node2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">gnbid</span><span class="token punctuation">:</span> <span class="token number">20820</span>
+    <span class="token key atrule">controllers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> e2t<span class="token punctuation">-</span><span class="token number">1</span>
+    <span class="token key atrule">servicemodels</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> mho
+    <span class="token punctuation">-</span> kpm
+    <span class="token punctuation">-</span> rcpre2
+    <span class="token punctuation">-</span> kpm2
+    <span class="token key atrule">cells</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450241</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450242</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450243</span>
+    <span class="token key atrule">status</span><span class="token punctuation">:</span> stopped
+<span class="token key atrule">cells</span><span class="token punctuation">:</span>
+  <span class="token key atrule">cell1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">ncgi</span><span class="token punctuation">:</span> <span class="token number">222084856477433857</span>
+    <span class="token key atrule">sector</span><span class="token punctuation">:</span>
+      <span class="token key atrule">center</span><span class="token punctuation">:</span>
+        <span class="token key atrule">lat</span><span class="token punctuation">:</span> <span class="token number">52.486405366824926</span>
+        <span class="token key atrule">lng</span><span class="token punctuation">:</span> <span class="token number">13.412233915182187</span>
+      <span class="token key atrule">azimuth</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">arc</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">tilt</span><span class="token punctuation">:</span> <span class="token number">1</span>
+      <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">43</span>
+    <span class="token key atrule">color</span><span class="token punctuation">:</span> green
+    <span class="token key atrule">maxues</span><span class="token punctuation">:</span> <span class="token number">99999</span>
+    <span class="token key atrule">neighbors</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433858</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433859</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450241</span>
+    <span class="token key atrule">txpowerdb</span><span class="token punctuation">:</span> <span class="token number">11</span>
+    <span class="token key atrule">measurementparams</span><span class="token punctuation">:</span>
+      <span class="token key atrule">timetotrigger</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">frequencyoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">pcellindividualoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">ncellindividualoffsets</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token key atrule">hysteresis</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">eventa3params</span><span class="token punctuation">:</span>
+        <span class="token key atrule">a3offset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token key atrule">reportonleave</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">pci</span><span class="token punctuation">:</span> <span class="token number">480</span>
+    <span class="token key atrule">earfcn</span><span class="token punctuation">:</span> <span class="token number">42</span>
+    <span class="token key atrule">celltype</span><span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token key atrule">rrcidlecount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">rrcconnectedcount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">cell2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">ncgi</span><span class="token punctuation">:</span> <span class="token number">222084856477433858</span>
+    <span class="token key atrule">sector</span><span class="token punctuation">:</span>
+      <span class="token key atrule">center</span><span class="token punctuation">:</span>
+        <span class="token key atrule">lat</span><span class="token punctuation">:</span> <span class="token number">52.486405366824926</span>
+        <span class="token key atrule">lng</span><span class="token punctuation">:</span> <span class="token number">13.412233915182187</span>
+      <span class="token key atrule">azimuth</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">arc</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">tilt</span><span class="token punctuation">:</span> <span class="token number">-10</span>
+      <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">28</span>
+    <span class="token key atrule">color</span><span class="token punctuation">:</span> green
+    <span class="token key atrule">maxues</span><span class="token punctuation">:</span> <span class="token number">99999</span>
+    <span class="token key atrule">neighbors</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433857</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433859</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450242</span>
+    <span class="token key atrule">txpowerdb</span><span class="token punctuation">:</span> <span class="token number">11</span>
+    <span class="token key atrule">measurementparams</span><span class="token punctuation">:</span>
+      <span class="token key atrule">timetotrigger</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">frequencyoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">pcellindividualoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">ncellindividualoffsets</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token key atrule">hysteresis</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">eventa3params</span><span class="token punctuation">:</span>
+        <span class="token key atrule">a3offset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token key atrule">reportonleave</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">pci</span><span class="token punctuation">:</span> <span class="token number">148</span>
+    <span class="token key atrule">earfcn</span><span class="token punctuation">:</span> <span class="token number">43</span>
+    <span class="token key atrule">celltype</span><span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token key atrule">rrcidlecount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">rrcconnectedcount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">cell3</span><span class="token punctuation">:</span>
+    <span class="token key atrule">ncgi</span><span class="token punctuation">:</span> <span class="token number">222084856477433859</span>
+    <span class="token key atrule">sector</span><span class="token punctuation">:</span>
+      <span class="token key atrule">center</span><span class="token punctuation">:</span>
+        <span class="token key atrule">lat</span><span class="token punctuation">:</span> <span class="token number">52.486405366824926</span>
+        <span class="token key atrule">lng</span><span class="token punctuation">:</span> <span class="token number">13.412233915182187</span>
+      <span class="token key atrule">azimuth</span><span class="token punctuation">:</span> <span class="token number">240</span>
+      <span class="token key atrule">arc</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">tilt</span><span class="token punctuation">:</span> <span class="token number">-10</span>
+      <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">22</span>
+    <span class="token key atrule">color</span><span class="token punctuation">:</span> green
+    <span class="token key atrule">maxues</span><span class="token punctuation">:</span> <span class="token number">99999</span>
+    <span class="token key atrule">neighbors</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450243</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433857</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433858</span>
+    <span class="token key atrule">txpowerdb</span><span class="token punctuation">:</span> <span class="token number">11</span>
+    <span class="token key atrule">measurementparams</span><span class="token punctuation">:</span>
+      <span class="token key atrule">timetotrigger</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">frequencyoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">pcellindividualoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">ncellindividualoffsets</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token key atrule">hysteresis</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">eventa3params</span><span class="token punctuation">:</span>
+        <span class="token key atrule">a3offset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token key atrule">reportonleave</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">pci</span><span class="token punctuation">:</span> <span class="token number">218</span>
+    <span class="token key atrule">earfcn</span><span class="token punctuation">:</span> <span class="token number">44</span>
+    <span class="token key atrule">celltype</span><span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token key atrule">rrcidlecount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">rrcconnectedcount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">cell4</span><span class="token punctuation">:</span>
+    <span class="token key atrule">ncgi</span><span class="token punctuation">:</span> <span class="token number">222084856477450241</span>
+    <span class="token key atrule">sector</span><span class="token punctuation">:</span>
+      <span class="token key atrule">center</span><span class="token punctuation">:</span>
+        <span class="token key atrule">lat</span><span class="token punctuation">:</span> <span class="token number">52.50431527434924</span>
+        <span class="token key atrule">lng</span><span class="token punctuation">:</span> <span class="token number">13.453261970488306</span>
+      <span class="token key atrule">azimuth</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">arc</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">tilt</span><span class="token punctuation">:</span> <span class="token number">-15</span>
+      <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">46</span>
+    <span class="token key atrule">color</span><span class="token punctuation">:</span> green
+    <span class="token key atrule">maxues</span><span class="token punctuation">:</span> <span class="token number">99999</span>
+    <span class="token key atrule">neighbors</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433857</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450242</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450243</span>
+    <span class="token key atrule">txpowerdb</span><span class="token punctuation">:</span> <span class="token number">11</span>
+    <span class="token key atrule">measurementparams</span><span class="token punctuation">:</span>
+      <span class="token key atrule">timetotrigger</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">frequencyoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">pcellindividualoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">ncellindividualoffsets</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token key atrule">hysteresis</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">eventa3params</span><span class="token punctuation">:</span>
+        <span class="token key atrule">a3offset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token key atrule">reportonleave</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">pci</span><span class="token punctuation">:</span> <span class="token number">218</span>
+    <span class="token key atrule">earfcn</span><span class="token punctuation">:</span> <span class="token number">45</span>
+    <span class="token key atrule">celltype</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">rrcidlecount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">rrcconnectedcount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">cell5</span><span class="token punctuation">:</span>
+    <span class="token key atrule">ncgi</span><span class="token punctuation">:</span> <span class="token number">222084856477450242</span>
+    <span class="token key atrule">sector</span><span class="token punctuation">:</span>
+      <span class="token key atrule">center</span><span class="token punctuation">:</span>
+        <span class="token key atrule">lat</span><span class="token punctuation">:</span> <span class="token number">52.50431527434924</span>
+        <span class="token key atrule">lng</span><span class="token punctuation">:</span> <span class="token number">13.453261970488306</span>
+      <span class="token key atrule">azimuth</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">arc</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">tilt</span><span class="token punctuation">:</span> <span class="token number">10</span>
+      <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">49</span>
+    <span class="token key atrule">color</span><span class="token punctuation">:</span> green
+    <span class="token key atrule">maxues</span><span class="token punctuation">:</span> <span class="token number">99999</span>
+    <span class="token key atrule">neighbors</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450243</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433858</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450241</span>
+    <span class="token key atrule">txpowerdb</span><span class="token punctuation">:</span> <span class="token number">11</span>
+    <span class="token key atrule">measurementparams</span><span class="token punctuation">:</span>
+      <span class="token key atrule">timetotrigger</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">frequencyoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">pcellindividualoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">ncellindividualoffsets</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token key atrule">hysteresis</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">eventa3params</span><span class="token punctuation">:</span>
+        <span class="token key atrule">a3offset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token key atrule">reportonleave</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">pci</span><span class="token punctuation">:</span> <span class="token number">480</span>
+    <span class="token key atrule">earfcn</span><span class="token punctuation">:</span> <span class="token number">46</span>
+    <span class="token key atrule">celltype</span><span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token key atrule">rrcidlecount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">rrcconnectedcount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">cell6</span><span class="token punctuation">:</span>
+    <span class="token key atrule">ncgi</span><span class="token punctuation">:</span> <span class="token number">222084856477450243</span>
+    <span class="token key atrule">sector</span><span class="token punctuation">:</span>
+      <span class="token key atrule">center</span><span class="token punctuation">:</span>
+        <span class="token key atrule">lat</span><span class="token punctuation">:</span> <span class="token number">52.50431527434924</span>
+        <span class="token key atrule">lng</span><span class="token punctuation">:</span> <span class="token number">13.453261970488306</span>
+      <span class="token key atrule">azimuth</span><span class="token punctuation">:</span> <span class="token number">240</span>
+      <span class="token key atrule">arc</span><span class="token punctuation">:</span> <span class="token number">120</span>
+      <span class="token key atrule">tilt</span><span class="token punctuation">:</span> <span class="token number">-6</span>
+      <span class="token key atrule">height</span><span class="token punctuation">:</span> <span class="token number">29</span>
+    <span class="token key atrule">color</span><span class="token punctuation">:</span> green
+    <span class="token key atrule">maxues</span><span class="token punctuation">:</span> <span class="token number">99999</span>
+    <span class="token key atrule">neighbors</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477433859</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450241</span>
+    <span class="token punctuation">-</span> <span class="token number">222084856477450242</span>
+    <span class="token key atrule">txpowerdb</span><span class="token punctuation">:</span> <span class="token number">11</span>
+    <span class="token key atrule">measurementparams</span><span class="token punctuation">:</span>
+      <span class="token key atrule">timetotrigger</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">frequencyoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">pcellindividualoffset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">ncellindividualoffsets</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token key atrule">hysteresis</span><span class="token punctuation">:</span> <span class="token number">0</span>
+      <span class="token key atrule">eventa3params</span><span class="token punctuation">:</span>
+        <span class="token key atrule">a3offset</span><span class="token punctuation">:</span> <span class="token number">0</span>
+        <span class="token key atrule">reportonleave</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">pci</span><span class="token punctuation">:</span> <span class="token number">148</span>
+    <span class="token key atrule">earfcn</span><span class="token punctuation">:</span> <span class="token number">47</span>
+    <span class="token key atrule">celltype</span><span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token key atrule">rrcidlecount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+    <span class="token key atrule">rrcconnectedcount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token key atrule">controllers</span><span class="token punctuation">:</span>
+  <span class="token key atrule">e2t-1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">id</span><span class="token punctuation">:</span> e2t<span class="token punctuation">-</span><span class="token number">1</span>
+    <span class="token key atrule">address</span><span class="token punctuation">:</span> onos<span class="token punctuation">-</span>e2t
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">36421</span>
+<span class="token key atrule">servicemodels</span><span class="token punctuation">:</span>
+  <span class="token key atrule">kpm</span><span class="token punctuation">:</span>
+    <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">1</span>
+    <span class="token key atrule">description</span><span class="token punctuation">:</span> kpm service model
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> 1.0.0
+  <span class="token key atrule">kpm2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">4</span>
+    <span class="token key atrule">description</span><span class="token punctuation">:</span> kpm2 service model
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> 1.0.0
+  <span class="token key atrule">mho</span><span class="token punctuation">:</span>
+    <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">5</span>
+    <span class="token key atrule">description</span><span class="token punctuation">:</span> mho service model
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> 1.0.0
+  <span class="token key atrule">rcpre2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">id</span><span class="token punctuation">:</span> <span class="token number">3</span>
+    <span class="token key atrule">description</span><span class="token punctuation">:</span> rcpre2 service model
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> 1.0.0
+<span class="token key atrule">RrcStateChangesDisabled</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">initialRrcState</span><span class="token punctuation">:</span> <span class="token string">""</span>
+<span class="token key atrule">ueCount</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token key atrule">ueCountPerCell</span><span class="token punctuation">:</span> <span class="token number">15</span>
+<span class="token key atrule">plmnID</span><span class="token punctuation">:</span> <span class="token string">"315010"</span>
+<span class="token key atrule">plmnNumber</span><span class="token punctuation">:</span> <span class="token number">3231760</span>
+<span class="token key atrule">apiKey</span><span class="token punctuation">:</span> <span class="token string">""</span>
+<span class="token key atrule">guami</span><span class="token punctuation">:</span>
+  <span class="token key atrule">amfregionid</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">amfsetid</span><span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token key atrule">amfpointer</span><span class="token punctuation">:</span> <span class="token number">0</span>
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-39" role="group" aria-label="39 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Visualize using Grafana</p><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Run inside sdran-helm-charts cloned repository</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> onos-kpimon onos-kpimon
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> onos-pci onos-pci
+<span class="token comment"># Enable fluent-bit and prometheus-stack in onos-exporter/values.yaml</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> onos-exporter onos-exporter
+</code></pre><p><a href="https://docs.sd-ran.org/master/onos-exporter/README.html">onos-exporter docs</a></p></div></div><div class="swiper-slide" data-hash="slide-40" role="group" aria-label="40 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Running Simulation</h2><p>Visualize using Grafana</p><p><img src="/41d62fd619b30bcce36d.webp" alt="Grafana"></p><p>UE will be connected to best cell services (depends on the configuration cell in
+model).</p><blockquote><p><strong>Note</strong>: Cell Id ncgi represented as hex int format in simulation. <strong>Example</strong>:
+<strong>87893173159116801</strong> (model yaml) -&gt; <strong>13842601454c001</strong> (grafana dashboard)</p></blockquote></div></div><div class="swiper-slide" data-hash="slide-41" role="group" aria-label="41 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Tips</h2><ul><li>Enable kubectl autocompletion<ul><li><a href="https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/">Bash completion</a></li><li><a href="https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-zsh/">Zsh completion</a></li></ul></li><li>Run terminal session using <code>tmux</code> or <code>screen</code><ul><li>Prevent lost work</li><li>Multiple pane terminal in one session</li><li>Easy attach/detach the ssh session</li></ul></li></ul></div></div><div class="swiper-slide section-title" data-hash="slide-42" role="group" aria-label="42 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Video Demo</h2><p><a href="https://drive.google.com/file/d/1Rv4Jw19OWESdqR6aO9RLQirl9FlzsKNL/view">Video Demo</a></p></div></div><div class="swiper-slide section-title" data-hash="slide-43" role="group" aria-label="43 / 51" style="width: 1200px;"><div class="slide-internal-box"><h1>Developing App</h1></div></div><div class="swiper-slide" data-hash="slide-44" role="group" aria-label="44 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Developing App</h2><p>Application in O-RAN</p><ul><li>rApp: not mentioned in SD-RAN onosproject documentation.</li><li>xApp: API &amp; SDK available</li></ul></div></div><div class="swiper-slide" data-hash="slide-45" role="group" aria-label="45 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Developing xApp</h2><p>An xApp is a software tool used by RAN Intelligent Controller (RIC) to manage
+network functions in near-real time.</p><pre class="language-md" tabindex="0"><code class="language-md"><span class="token list punctuation">*</span> Official available API &amp; SDK to support xApp development
+  <span class="token list punctuation">*</span> onos-api: API definition protobuf
+  <span class="token list punctuation">*</span> onos-ric-sdk-go: E2, O1, A1 and Topo module
+  <span class="token list punctuation">*</span> onos-ric-sdk-py: E2 and SDL (Shared Data Layer) module
+
+<span class="token list punctuation">*</span> onos-ric-sdk-go
+  <span class="token list punctuation">*</span> onos-kpimon: KPI monitoring xApp
+  <span class="token list punctuation">*</span> onos-pci: Physical Cell Identity xAPP
+  <span class="token list punctuation">*</span> rimedo-ts: Traffic Steering xApp
+<span class="token list punctuation">*</span> onos-ric-sdk-py
+  <span class="token list punctuation">*</span> onos-ric-python-apps: ONOS RIC xApps authored in Python
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-46" role="group" aria-label="46 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Developing xApp</h2><p>Overview of xApp Architecture</p><div class="grid"><div class="column"><p><img src="/99931efff765ecf9cd6d.webp" alt="Onos KPI"></p></div><div class="column"><ul><li>onos-kpimon xApp create subscriptions through E2 interface</li><li>Communication between southbound and northbound handled by broker</li><li>Data of measurement metrics handled by store</li><li>onos-exporter scrape KPI from northbound onos-kpimon</li></ul></div></div></div></div><div class="swiper-slide" data-hash="slide-47" role="group" aria-label="47 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Developing xApp</h2><p>Installing available xApp Examples</p><ul><li>xApp installation can be done using helm command</li></ul><pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Run inside sdran-helm-charts cloned repository</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> onos-kpimon onos-kpimon
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> rimedo-ts rimedo-ts
+<span class="token comment"># Or using sdran repo</span>
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> onos-kpimon sdran/onos-kpimon
+helm <span class="token parameter variable">-n</span> sdran <span class="token function">install</span> rimedo-ts sdran/rimedo-ts
+</code></pre><blockquote><p>Some xApp only compatible for specific requirements version of SD-RAN
+components. There are two kind of versions in Helm chart, chart version and
+app version, be careful. Example: <a href="https://github.com/onosproject/rimedo-ts#requirements">rimedo-ts</a></p></blockquote></div></div><div class="swiper-slide" data-hash="slide-48" role="group" aria-label="48 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Developing xApp</h2><ul><li>Build project using <code>make</code> command and <a href="https://github.com/onosproject/build-tools">build-tools</a>.</li><li>Definition of target defined in Makefile file.</li><li><a href="https://github.com/onosproject/onos-kpimon/blob/master/Makefile">Makefile Example</a></li></ul></div></div><div class="swiper-slide" data-hash="slide-49" role="group" aria-label="49 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Developing xApp</h2><p>Test Driven Development (TDD) support using <a href="https://github.com/onosproject/helmit">helmit</a>.</p></div></div><div class="swiper-slide" data-hash="slide-50" role="group" aria-label="50 / 51" style="width: 1200px;"><div class="slide-internal-box"><h2>Developing xApp</h2><p>Challenge</p><ul><li>Intercept reverse port-forward component from cluster to local communication</li><li>No many resource of tutorial</li></ul></div></div><div class="swiper-slide" data-hash="slide-51" role="group" aria-label="51 / 51" style="width: 1200px;"><div class="slide-internal-box"><h1>Thank You</h1></div></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></div></body></html>
